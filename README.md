@@ -33,7 +33,6 @@ Watch the complete **RISC-V Tutorial Series** on the [Semi Edge YouTube Channel]
 
 ---
 ## Supported Instructions
-
 This design implements all 47 RV32I instructions:
 **R-type:** add, sub, sll, slt, sltu, xor, srl, sra, or, and
 **I-type (arithmetic):** addi, slti, sltiu, xori, ori, andi, slli, srli, srai
@@ -42,3 +41,10 @@ This design implements all 47 RV32I instructions:
 **Branch:** beq, bne, blt, bge, bltu, bgeu
 **Jump:** jal, jalr
 **Upper Immediate:** lui, auipc
+
+---
+##  Simulation Results
+<p align="center">
+  <img src="https://github.com/majidale/Semi-Edge-RISC-V/blob/main/RISCV_Single_Cycle/Simulation%20Results.png" >
+</p>
+---

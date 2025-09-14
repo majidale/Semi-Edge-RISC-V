@@ -1,0 +1,89 @@
+    .section .text
+    .globl _start
+_start:
+    # ---------------------------
+    # I-type (immediates)
+    # ---------------------------
+    addi x1, x0, 5
+    addi x2, x0, 10
+    slti x3, x1, 20
+    sltiu x4, x1, 20
+    xori x5, x1, 0xF
+    ori  x6, x2, 0xF0
+    andi x7, x2, 0xFF
+    slli x8, x1, 2
+    srli x9, x2, 1
+    srai x10, x2, 1
+
+    # ---------------------------
+    # R-type (register-register)
+    # ---------------------------
+    add x11, x1, x2
+    sub x12, x2, x1
+    and x13, x1, x2
+    or  x14, x1, x2
+    xor x15, x1, x2
+    sll x16, x1, x2
+    srl x17, x2, x1
+    sra x18, x2, x1
+    slt x19, x1, x2
+    sltu x20, x1, x2
+
+    # ---------------------------
+    # Upper immediates
+    # ---------------------------
+    lui   x21, 0x12345
+    auipc x22, 0x1
+
+    # ---------------------------
+    # Jumps
+    # ---------------------------
+    jal   x23, label_jal
+    nop
+label_jal:
+    jalr  x24, x1, 0   # jump to (x1+0)
+
+    # ---------------------------
+    # Stores
+    # ---------------------------
+    sb x11, 0(x0)
+    sh x11, 2(x0)
+    sw x11, 4(x0)
+
+    # ---------------------------
+    # Loads
+    # ---------------------------
+    lb  x25, 0(x0)
+    lh  x26, 2(x0)
+    lw  x27, 4(x0)
+    lbu x28, 0(x0)
+    lhu x29, 2(x0)
+
+    # ---------------------------
+    # Branches
+    # ---------------------------
+    beq  x1, x2, label_beq
+    bne  x1, x2, label_bne
+    blt  x1, x2, label_blt
+    bge  x1, x2, label_bge
+    bltu x1, x2, label_bltu
+    bgeu x1, x2, label_bgeu
+
+label_beq:
+    addi x30, x0, 1
+label_bne:
+    addi x30, x0, 2
+label_blt:
+    addi x30, x0, 3
+label_bge:
+    addi x30, x0, 4
+label_bltu:
+    addi x30, x0, 5
+label_bgeu:
+    addi x30, x0, 6
+
+    # ---------------------------
+    # End (infinite loop)
+    # ---------------------------
+end:
+    jal x0, end   # loop forever

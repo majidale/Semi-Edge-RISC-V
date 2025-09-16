@@ -6,16 +6,16 @@ If you’re learning RISC-V step by step from my channel, this is the right plac
 
 ---
 
-## 📂 Repository Contents
-- 📘 Documentation & Notes  
-- 📝 RISC-V Instruction References  
-- 💻 Verilog/SystemVerilog Codes  
-- 🔧 Testbenches & Examples  
-- 🖥️ Diagrams & Slides  
+##  Repository Contents
+ 📘 Documentation & Notes  
+ 📝 RISC-V Instruction References  
+ 💻 Verilog/SystemVerilog Codes  
+ 🔧 Testbenches & Examples  
+ 🖥️ Diagrams & Slides  
 
 ---
 
-## ▶️ YouTube Playlist
+##  YouTube Playlist
 Watch the complete **RISC-V Tutorial Series** on the [Semi Edge YouTube Channel](https://www.youtube.com/@semiedge1).  
 
 ---
